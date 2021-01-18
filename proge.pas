@@ -19,7 +19,7 @@ begin
 end;
 begin
   SetWindowTitle('Шахматы');
-  width:=400;
+  width:=600;
   SetWindowSize(width,width);
   shag:=width/8;
   for var i:=0 to 8 do 
@@ -32,11 +32,11 @@ begin
     line(Round(shag*i),0,Round(shag*i),width);
   end;
     y:=25;
-    for var i:=1 to 8 do 
+    for var i:=1 to 4 do 
     begin
       zakrash(x,y,1);
-      zakrash(x,y+50,2); 
-      y:=y+50*2;
+      zakrash(x,Round(y+shag),2); 
+      y:=Round(y+shag*2);
     end;
 
    
