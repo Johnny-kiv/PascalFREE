@@ -1,5 +1,6 @@
 ﻿program Шахматы;
 uses graphABC;
+var y:integer;
 var 
   width:integer;
   shag:real;
@@ -30,11 +31,13 @@ begin
   begin
     line(Round(shag*i),0,Round(shag*i),width);
   end;
-  var y:=25
-  for var i:=0 to 7 do
-  begin
-    zakrash(x,y,1);
-    zakrash(x,y+50,2);     
-  end;
+    y:=25;
+    for var i:=1 to 8 do 
+    begin
+      zakrash(x,y,1);
+      zakrash(x,y+50,2); 
+      y:=y+50*2;
+    end;
+
    
 end.
