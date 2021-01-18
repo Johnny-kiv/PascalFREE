@@ -4,19 +4,21 @@ var
   width:integer;
   shag:real;
   x:real;
-procedure zakrash(x:real;y:integer;col:integer);
-begin
-    
-    x:=shag/2;
+procedure zakrash(x:real;  y:integer;  col:integer);
+begin   
     if col=1 then
-      x:=x+shag;
+      x:=shag/2;
     if col=2 then
-      x:=x+shag/2;
-
+      x:=shag/2+shag;
+    for var i:=0 to 3 do
+    begin
+      FloodFill(Round(x),y,clBlack);
+      x:=x+shag*2;
+    end;
 end;
 begin
   SetWindowTitle('Шахматы');
-  readln(width);
+  width:=400;
   SetWindowSize(width,width);
   shag:=width/8;
   for var i:=0 to 8 do 
@@ -28,9 +30,11 @@ begin
   begin
     line(Round(shag*i),0,Round(shag*i),width);
   end;
+  var y:=25
   for var i:=0 to 7 do
   begin
-      zakrash(x,Rotade(shag/2),1);
+    zakrash(x,y,1);
+    zakrash(x,y+50,2);     
   end;
    
 end.
