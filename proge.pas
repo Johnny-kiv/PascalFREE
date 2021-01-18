@@ -1,4 +1,7 @@
-﻿program Шахматы;
+﻿{Эта прогграмма
+рисует шахматную доску}
+{Автор: johnny kiv}
+program Шахматы;
 uses graphABC;
 var y:integer;
 var 
