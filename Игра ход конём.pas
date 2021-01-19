@@ -18,5 +18,6 @@ begin
   begin
     line(Round(shag*i),0,Round(shag*i),width);
   end;
-  OnMouseDown := (x,y,mb) -> FloodFill(x,y,clRandom);
+  OnMouseDown := (x,y,mb) -> FloodFill(x,y,clBlue);
+  
 end.
