@@ -8,21 +8,8 @@ uses
 var 
 width:integer;
 shag:real;
-procedure MouseDown(x, y, m: integer);
 begin
-  m:=0;    
-  OnMouseDown := (x,y,mb) -> FloodFill(x,y,clBlue);
-  var b:=2;
-  while  b<0 do
-  begin
-    b:=b-1;
-    m:=m+1;
-    if m=2 then
-      FloodFill(30,30,clRed);
-  end;
-end;
-begin
-  SetWindowTitle('Шахматы');
+  SetWindowTitle('Игра ход конём');
   width:=600;
   SetWindowSize(width,width);
   shag:=width/10;
@@ -35,5 +22,9 @@ begin
     line(Round(shag*i),0,Round(shag*i),width);
   end;
   
-  OnMouseDown:=MouseDown;
+
+  var a:=0;
+  OnMouseDown:= (x,y,mb) -> a=a+1;
+  if a=2 then
+    FloodFill(25,25,clRed);
 end.
