@@ -6,7 +6,7 @@ var
 // В OnDrawFrame объект сам себя перерисовывает
 begin
   Window.Title := 'Модуль Controls - StatusBar';
-  var l := LeftPanel(180,Colors.Blue);
+  var l :=RightPanel(180,Colors.Blue);
 
   var c := new RectangleWPF(200,450,250,130,Colors.Brown);
   c.Direction := (1,0);
@@ -35,9 +35,9 @@ begin
   g.Direction := (0,1);
   g.Velocity := 50;
   g.Tag := 50; // скорость поворота
-  OnDrawFrame := dt -> begin
-    g.MoveTime(dt);  
-    g.RotateAngle += integer(g.Tag) * dt;
+  OnDrawFrame := dd -> begin
+    g.MoveTime(dd);  
+    g.RotateAngle += integer(g.Tag) * dd;
   end;
   Button('⛔️❗').Click := procedure -> begin
     g.Velocity := 0;
