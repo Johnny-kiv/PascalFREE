@@ -26,4 +26,5 @@ begin
   Lego(8,7,2.8,1,2,3,Colors.Gray);
   Lego(8,-10,4.1,7,2,3,Colors.Gray);
   Lego(8,1,4.1,7,2,3,Colors.Gray);
+  Lego(8,7,5.4,18,2,3,Colors.Gray);
 end.
