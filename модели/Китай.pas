@@ -3,7 +3,7 @@
 begin
   View3D.ShowGridLines := False;
   View3D.ShowCoordinateSystem := False;
-  Lego(-10,-10,1,18,20,1,Colors.Green);
+  Lego(-40,-10,1,70,100,1,Colors.Green);
   Lego(-10,-3,1.5,4,4,1,Colors.Blue);
   Lego(-6,-2,1.5,4,2,1,Colors.Blue);
   Lego(-4,0,1.5,4,2,1,Colors.Blue);
@@ -26,5 +26,7 @@ begin
   Lego(8,7,2.8,1,2,3,Colors.Gray);
   Lego(8,-10,4.1,7,2,3,Colors.Gray);
   Lego(8,1,4.1,7,2,3,Colors.Gray);
-  Lego(8,7,5.4,18,2,3,Colors.Gray);
+  Lego(8,-10,5.4,18,2,3,Colors.Gray);
+  Lego(8,-2,6.5,4,2,5,Colors.Black);
+  Pyramid(8.7,0,8.5,100,2,3,Colors.Red);
 end.

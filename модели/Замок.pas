@@ -1,6 +1,9 @@
 ﻿uses Graph3D;
 
 begin
+  View3D.ShowViewCube := False;
+  View3D.ShowGridLines := False;
+  View3D.ShowCoordinateSystem := False;
   Lego(-6,-5,1,12,12,1,Colors.Green);
   Lego(-6,-5,1.5,6,1,10,Colors.Gray);
   Lego(-6,1,1.5,6,1,10,Colors.Gray);
